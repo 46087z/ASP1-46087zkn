@@ -1,0 +1,51 @@
+﻿@page
+@model LoginModel
+@{
+    ViewData["Title"] = "";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<div id="content" align="center">
+    <table width="900" border="0" align="center" cellpadding="0" cellspacing="0">
+        <tr>
+            <td valign="top" align="left" id="in_content">
+                <div id="breacrums"><span class="btitle"><span class="ui-icon ui-icon-carat-1-e"></span>Вход</span></div><h1 class="title">Вход</h1>
+                <div id="loginContainer" class="readyState">
+                    <div class="loadingMsg ui-state-default"><span class="ui-icon ui-icon-loading"></span><font>Зареждане</font></div>
+                    <div class="errorMsg ui-state-error"><span class="ui-icon ui-icon-alert"></span><font>Грешна парола или имейл. Моля опитайте отново.</font></div>
+                    <div class="sentMsg ui-state-highlight"><span class="ui-icon ui-icon-circle-check"></span><font>Вие влязохте успешно.</font></div>
+                    <div class="readyMsg">
+                        <form id="loginForm" name="loginForm" method="get">
+                            <table width="100%" border="0" cellspacing="0" cellpadding="0" class="formTable">
+                                <tr>
+                                    <td colspan="2" class="line">&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td><label for="email">Email *:</label></td>
+                                    <td><span class="errorContainer ui-helper-reset ui-helper-clearfix"><input type="text" name="email" id="email" class="required email" title="Email" /></span></td>
+                                </tr>
+                                <tr>
+                                    <td><label for="password">Парола *:</label></td>
+                                    <td><span class="errorContainer ui-helper-reset ui-helper-clearfix"><input type="password" name="password" id="password" class="required" title="Парола" /></span></td>
+                                </tr>
+                                <tr>
+                                    <td>&nbsp;</td>
+                                    <td><a asp-page="/Forgot">Забравена Парола?</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a asp-page="/Signup">Регистрация</a></td>
+                                    <span></span>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" class="line">&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td align="right"><button type="submit" ui-button="{icons:{primary:'ui-icon-power'}}">Вход</button></td>
+                                </tr>
+                            </table>
+                            <input name="command" type="hidden" value="login" />
+                        </form>
+                    </div>
+                </div>
+            </td>
+        </tr>
+    </table>
+</div>

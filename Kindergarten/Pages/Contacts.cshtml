@@ -1,0 +1,104 @@
+﻿@page
+@model ContactsModel
+@{
+    ViewData["Title"] = "";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<div id="content" align="center">
+    <table width="900" border="0" align="center" cellpadding="0" cellspacing="0">
+        <tr>
+            <td valign="top" align="left" id="in_content">
+                <div id="breacrums"><span class="btitle"><span class="ui-icon ui-icon-carat-1-e"></span>Контакти</span></div><h1 class="title">Контакти</h1>
+                <p>
+                    <iframe frameborder="0" height="350" marginheight="0" marginwidth="0" scrolling="no" src="http://maps.google.com/maps?q=42.621565,23.368217&amp;num=1&amp;ie=UTF8&amp;t=m&amp;ll=42.621202,23.370409&amp;spn=0.022105,0.036478&amp;z=14&amp;output=embed" width="425"></iframe><br />
+                    <small><a href="http://maps.google.com/maps?q=42.621565,23.368217&amp;num=1&amp;ie=UTF8&amp;t=m&amp;ll=42.621202,23.370409&amp;spn=0.022105,0.036478&amp;z=14&amp;source=embed" style="text-align: left; color: rgb(0, 0, 255);">View Larger Map</a></small>
+                </p>
+                <div>
+                    ж.к. София парк 1766
+                </div>
+                <div>
+                    сграда 16-З
+                </div>
+                <div>
+                    София, 1766
+                </div>
+                <div>
+                    &nbsp;
+                </div>
+                <div>
+                    02 967 0480
+                </div>
+                <div>
+                    0879 694 199
+                </div>
+                <div>
+                    <br />
+                    info@veselotogardje.com<br />
+                    &nbsp;
+                </div>
+                <p>
+                    <script type="text/javascript" src="~/js/jquery.validate.js"></script>
+                    <script type="text/javascript">
+<!--
+                        $(function () {
+                            var feedbackForm = $("#feedbackForm").reset(function () {
+                                $("#" + this.id + " .errorContainer").removeClass("errorElm").addClass("validElm");
+                                $(this).validate().resetForm();
+                            }).validate(ext_validate);
+                        });
+                        //-->
+                    </script>
+                    <div id="feedbackContainer" class="readyState">
+                        <div class="loadingMsg ui-state-default"><span class="ui-icon ui-icon-loading"></span><font>Зареждане</font></div>
+                        <div class="errorMsg ui-state-error"><span class="ui-icon ui-icon-alert"></span><font>Съобщението не е изпратено. Моля опитайте отново.</font></div>
+                        <div class="sentMsg ui-state-highlight"><span class="ui-icon ui-icon-circle-check"></span><font>Вашето съобщение е изпратено успешно.</font></div>
+                        <div class="readyMsg">
+                            <form id="feedbackForm" name="feedbackForm" method="post">
+                                <table width="100%" border="0" cellspacing="0" cellpadding="0" class="formTable">
+                                    <tr>
+                                        <td colspan="2" class="line">&nbsp;</td>
+                                    </tr>
+                                    <tr>
+                                        <td><label for="names">Име и Фамилия *:</label></td>
+                                        <td><span class="errorContainer ui-helper-reset ui-helper-clearfix"><input type="text" name="names" id="names" class="required" title="Име и Фамилия" value="" /></span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><label for="email">Email *:</label></td>
+                                        <td><span class="errorContainer ui-helper-reset ui-helper-clearfix"><input type="text" name="email" id="email" class="required email" title="Email" value="" /></span></td>
+                                    </tr>
+                                    <tr>
+                                        <td valign="top"><label for="content_text" class="textarea">Текст *:</label></td>
+                                        <td valign="top"><span class="errorContainer  ui-helper-reset ui-helper-clearfix"><textarea name="content" cols="70" rows="5" class="required" id="content_text" title="Текст"></textarea></span></td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2" class="line">&nbsp;</td>
+                                    </tr>
+                                    <tr>
+                                        <td><button type="reset" ui-button="{icons:{primary:'ui-icon-close'}}">Изчисти</button></td>
+                                        <td align="right"><button type="submit" ui-button="{icons:{secondary:'ui-icon-mail-closed'}}">Изпрати</button></td>
+                                    </tr>
+                                </table>
+                                <input name="command" type="hidden" value="send" />
+                            </form>
+                        </div>
+                    </div>
+                </p>
+                <div class="skype_pnh_menu_container" id="skype_pnh_menu_container" onmouseout="SkypeClick2Call.MenuInjectionHandler.hideMenu(event)" onmouseover="SkypeClick2Call.MenuInjectionHandler.showMenu(this, event)" style="display:none;">
+                    <div class="skype_pnh_menu_click2call">
+                        <a class="skype_pnh_menu_click2call_action" id="skype_pnh_menu_click2call_action">Call</a>
+                    </div>
+                    <div class="skype_pnh_menu_click2sms">
+                        <a class="skype_pnh_menu_click2sms_action" id="skype_pnh_menu_click2sms_action">Send SMS</a>
+                    </div>
+                    <div class="skype_pnh_menu_add2skype">
+                        <a class="skype_pnh_menu_add2skype_text" id="skype_pnh_menu_add2skype_text">Add to Skype</a>
+                    </div>
+                    <div class="skype_pnh_menu_toll_info">
+                        <span class="skype_pnh_menu_toll_callcredit">You&#39;ll need Skype Credit</span><span class="skype_pnh_menu_toll_free">Free via Skype</span>
+                    </div>
+                </div>
+            </td>
+        </tr>
+    </table>
+</div>

@@ -1,0 +1,115 @@
+﻿@page
+@model GalleryModel
+@{
+    ViewData["Title"] = "";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<link href="~/css/lightslider.css" rel="stylesheet" type="text/css" />
+<style>
+    ul {
+        list-style: none outside none;
+        padding-left: 0;
+        margin: 0;
+    }
+
+    .content-slider li {
+        background-color: #ffffff;
+        text-align: center;
+        color: #0000ff;
+    }
+
+    .content-slider h3 {
+        margin: 0;
+        padding: 70px 0;
+    }
+</style>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="~/js/lightslider.js"></script>
+<script>
+    $(document).ready(function () {
+        $("#content-slider").lightSlider({
+            loop: true,
+            keyPress: true
+        });
+        $('#image-gallery').lightSlider({
+            gallery: false,
+            controls: true,
+            item: 1,
+            thumbItem: 0,
+            autoWidth: true,
+            slideMove: 1,
+            slideMargin: 100,
+            speed: 500,
+            auto: true,
+            loop: true,
+            responsive: [],
+            onSliderLoad: function () {
+                $('#image-gallery').removeClass('cS-hidden');
+            }
+        });
+    });
+</script>
+
+<div id="content" align="center">
+    <div class="item">
+        <div class="clearfix">
+            <ul id="content-slider" class="content-slider">
+                <li>
+                    <img src="~/images/cS-1.jpg" />
+                </li>
+                <li>
+                    <img src="~/images/cS-2.jpg" />
+                </li>
+                <li>
+                    <img src="~/images/cS-3.jpg" />
+                </li>
+                <li>
+                    <img src="~/images/cS-4.jpg" />
+                </li>
+                <li>
+                    <img src="~/images/cS-5.jpg" />
+                </li>
+                <li>
+                    <img src="~/images/cS-6.jpg" />
+                </li>
+                <li>
+                    <img src="~/images/cS-7.jpg" />
+                </li>
+                <li>
+                    <img src="~/images/cS-8.jpg" />
+                </li>
+                <li>
+                    <img src="~/images/cS-9.jpg" />
+                </li>
+                <li>
+                    <img src="~/images/cS-10.jpg" />
+                </li>
+                <li>
+                    <img src="~/images/cS-11.jpg" />
+                </li>
+                <li>
+                    <img src="~/images/cS-12.jpg" />
+                </li>
+                <li>
+                    <img src="~/images/cS-13.jpg" />
+                </li>
+                <li>
+                    <img src="~/images/cS-14.jpg" />
+                </li>
+                <li>
+                    <img src="~/images/cS-15.jpg" />
+                </li>
+                <li>
+                    <img src="~/images/cS-16.jpg" />
+                </li>
+                <li>
+                    <img src="~/images/cS-17.jpg" />
+                </li>
+                <li>
+                    <img src="~/images/cS-18.jpg" />
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

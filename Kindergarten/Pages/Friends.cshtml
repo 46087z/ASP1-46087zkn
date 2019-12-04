@@ -1,0 +1,42 @@
+﻿@page
+@model FriendsModel
+@{
+    ViewData["Title"] = "";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<div id="content" align="center">
+    <table width="900" border="0" align="center" cellpadding="0" cellspacing="0">
+        <tr>
+            <td valign="top" align="left" id="in_content">
+                <div id="breacrums"><span class="btitle"><span class="ui-icon ui-icon-carat-1-e"></span>Приятели и Партньори</span></div><h1 class="title g1">Приятели и Партньори</h1>
+                <div class="line" style="clear:both;"><img src="~/images/spacer.gif" width="1" height="1" alt="" /></div>
+                <div spry:region="dsData dsPages dsItems" class="SpryHiddenRegion" id="dataRegion">
+                    <div spry:state="failed" class="noitems">Грешка. Зареждането на информацията е неуспешно.</div>
+                    <div spry:state="error" class="noitems">Грешка. Информацията не е заредена.</div>
+                    <div spry:state="loading" class="loader"></div>
+                    <div spry:state="ready" class="ready">
+                        <div spry:if="{dsItems::ds_RowCount} > 0" spry:repeatchildren="dsItems" class="pagelist dateN">
+                            <div class="item {dsItems::ds_EvenOddRow}{dsItems::class}" spry:hover="hover">
+                                <div class="title" spry:if="{dsItems::visible_link} == 1"><a href="349/%7bdsItems__link%7d.html">{dsItems::title}</a></div>
+                                <div class="title" spry:if="{dsItems::visible_link} == 0">{dsItems::title}</div>
+                                <div class="date" spry:if="'{dsItems::date}' != ''">{dsItems::date}</div>
+                                <div class="image" spry:if="'{dsItems::image}' != ''"><a href="349/%7bdsItems__link%7d.html" spry:if="{dsItems::visible_link} == 1"><img src="%7bdsItems__image%7d.html" alt="{dsItems::title}" title="{dsItems::title}" border="0" /></a><span spry:if="{dsItems::visible_link} == 0"><img src="%7bdsItems__image%7d.html" alt="{dsItems::title}" title="{dsItems::title}" border="0" /></span></div>
+                                <div class="title_video" spry:if="{dsItems::visible_link} == 1"><a href="349/%7bdsItems__link%7d.html">{dsItems::title}</a></div>
+                                <div class="date_video"><span class="dt">{dsItems::date}</span><span class="line_vertical">&nbsp;</span><span class="counts">{dsItems::count} показвания</span></div>
+                                <div class="info_gallery"><span class="counts">{dsItems::count} снимки</span><span class="line_vertical">&nbsp;</span><a href="349/%7bdsItems__link%7d.html">Виж всички снимки</a></div>
+                                <div class="description">{dsItems::description}</div>
+                                <div spry:if="{dsItems::visible_link} == 1" class="more" align="right"><a href="349/%7bdsItems__link%7d.html">още</a></div>
+                            </div>
+                        </div>
+                        <div class="paging_list" spry:if="{dsPages::ds_RowCount} > 0">
+                            <ul spry:repeatchildren="dsPages"><li class="{dsPages::name}"><a href="#{dsPages::value}" class="{dsPages::name}"><span class="{dsPages::icon}"></span><span class="ui-button-text">{dsPages::label}</span></a></li></ul>
+                        </div>
+                        <div spry:if="{dsItems::ds_RowCount} == 0" class="noItems">Няма намерени редове.</div>
+                        <div spry:if="{dsData::info.view_arhive} > 0"><a href="#" spry:if="{dsData::info.view_arhive} == 2">Скрий архив</a><a href="#arhive=true" spry:if="{dsData::info.view_arhive} == 1">Покажи архив</a></div>
+                    </div>
+                </div>
+            </td>
+        </tr>
+    </table>
+</div>

@@ -1,0 +1,155 @@
+﻿<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"]Веселото Гардже - Частна детска градина</title>
+    <link rel="icon" href="favicon.png" type="image/x-icon" />
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
+    <link href="~/css/mlain.css" rel="stylesheet" type="text/css" />
+    <link href="~/css/style.css" rel="stylesheet" type="text/css" />
+
+    <script type="text/javascript" src="js/jquery-1.6.2.min.js"></script>
+    <script type="text/javascript" src="js/jquery-ui-1.8.16.min.js"></script>
+    <script type="text/javascript" src="js/jquery.metadata.js"></script>
+    <script type="text/javascript" src="js/jquery.validate.js"></script>
+    <script type="text/javascript" src="js/jquery.hash.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/swfobject_modified.js"></script>
+    <script type="text/javascript" src="js/list.js"></script>
+
+    <style type="text/css">
+        #nav_menu ul li a {
+            line-height: 50px !important;
+        }
+    </style>
+
+    <script type="text/javascript">
+        <!--
+        $(function () {
+            $('.home_menu ul ul').remove();
+            var home_menu_lines = Math.ceil($('.home_menu > ul.level_0 > li').length / 3);
+            $('.home_menu').height(home_menu_lines * 340);
+            var selLine = 1;
+            var topPX = [0, 0, 0, 254, 319, 254];
+            var cssStyle = [{ top: '0px', left: '0px', 'background-position': '0px 0px', width: '286px', height: '234px' },
+            { top: '0px', left: '301px', 'background-position': '-301px 0px', width: '251px', height: '308px' },
+            { top: '0px', left: '584px', 'background-position': '-584px 0px', width: '298px', height: '221px' },
+            { top: '254px', left: '0px', 'background-position': '0px -254px', width: '286px', height: '296px' },
+            { top: '319px', left: '301px', 'background-position': '-301px -319px', width: '299px', height: '299px' },
+            { top: '245px', left: '602px', 'background-position': '-602px -245px', width: '298px', height: '374px' }
+            ];
+            var cssStyleA = [{ 'line-height': '230px', 'text-align': 'right', 'padding-right': '10px' },
+            { 'line-height': '360px', 'text-align': 'center' },
+            { 'line-height': '240px', 'text-align': 'center' },
+            { 'line-height': '180px', 'text-align': 'left', 'padding-left': '10px' },
+            { 'line-height': '330px', 'text-align': 'center', 'padding-right': '10px' },
+            { 'line-height': '430px', 'text-align': 'right', 'padding-right': '10px' }
+            ];
+            $('.home_menu > ul.level_0 > li').each(function (index, element) {
+                var line = Math.ceil((index + 1) / 3);
+                var even = ((line % 2) != 0) ? 0 : 3;
+                var indx = (-((line * 3) - (index)) + 4);
+                if (selLine != line) {
+                    if (even != 3) {
+                        topPX[0] += 630;
+                        topPX[1] += 630;
+                        topPX[2] += 630;
+                        topPX[3] += 630;
+                        topPX[4] += 630;
+                        topPX[5] += 630;
+                    }
+                    selLine++;
+                }
+                var topInd = (even + indx - 1);
+                cssStyle[topInd].top = topPX[topInd] + 'px';
+                $(this).css(cssStyle[topInd]);
+                $(this).children('a').css(cssStyleA[topInd]);
+            });
+        });
+//-->
+    </script>
+</head>
+<body>
+    <header>
+        <div id="menu_adm" align="center">
+            <table width="100%" align="center" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                    <td align="center" width="70%">
+                        <ul class="nav menu level_0">
+                            <li><span></span><a asp-page="/Login">Вход</a></li>
+                            <li><span></span><a asp-page="/Signup">Регистрация</a></li>
+                            <li><span></span><a asp-page="/Forgot">Забравена Парола?</a></li>
+                        </ul>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div id="content" align="center">
+            <table width="900" border="0" align="center" cellpadding="0" cellspacing="0">
+
+                <tr>
+                    <td height="250">
+                        <div id="logo">
+                            <div class="banner" id="banner_24_5de597e1a0d3c">
+                                <a asp-page="/Index" target="_top"><img src="~/images/logo.png" /></a>
+                            </div>    <div id="gardje_left"><div></div></div>
+                            <div id="gardje_right"><div></div></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td height="50" valign="top">
+                        <div id="nav_menu">
+                            <ul class="nav menu level_0">
+                                <li><span></span><a asp-page="/Index">Начало</a></li>
+                                <li><span></span><a asp-page="/News">Новини</a></li>
+                                <li><span></span><a asp-page="/Mission">Нашата мисия</a></li>
+                                <li><span></span><a asp-page="/Place">Мястото</a></li>
+                                <li><span></span><a asp-page="/Activities">Занимания</a></li>
+                                <li><span></span><a asp-page="/Team">Екип</a></li>
+                                <li><span></span><a asp-page="/Gallery">Снимки/Видео</a></li>
+                                <li><span></span><a asp-page="/Contacts">Контакти</a></li>
+                            </ul>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+    <div id="links" align="center">
+        <table border="0" align="center" cellpadding="0" cellspacing="0">
+            <tr>
+                <td align="center">
+                    <ul class="nav menu level_0">
+                        <li><span></span><a asp-page="/News">Новини</a></li>
+                        <li><span></span><a asp-page="/Friends">Приятели и Партньори</a></li>
+                        <li><span></span><a asp-page="/Gallery">Снимки/Видео</a></li>
+                        <li><span></span><a asp-page="/Terms">Условия за ползване/Видео</a></li>
+                        <li><span></span><a asp-page="/Contacts">Контакти</a></li>
+                    </ul>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div align="center"></div>
+    <div id="footer" align="center">
+        <table width="900" border="0" align="center" cellpadding="0" cellspacing="0">
+            <tr>
+                <td align="left" height="50">
+                    <p>
+                        &copy; 2012 www.veselotogardje.com - All Rights Reserved
+                    </p>
+                </td>
+            </tr>
+        </table>
+    </div>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
